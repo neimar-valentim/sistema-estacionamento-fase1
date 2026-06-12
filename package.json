@@ -1,0 +1,11 @@
+{
+  "name": "sistema-controle-estacionamento-fase1",
+  "version": "1.0.0",
+  "description": "Fase 1 - Modelagem e implementação básica do Sistema de Controle de Estacionamento",
+  "main": "src/App.js",
+  "scripts": {
+    "start": "node src/App.js"
+  },
+  "author": "Neimar da Silva Valentim",
+  "license": "ISC"
+}

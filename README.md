@@ -1,105 +1,155 @@
-# Sistema de Controle de Estacionamento de Veículos de Passeio - Fase 1
-
-Projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos da Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS).
-
-## Descrição
-
-O projeto consiste no desenvolvimento de um sistema de controle de estacionamento de veículos de passeio utilizando JavaScript e conceitos de Programação Orientada a Objetos (POO).
-
-Nesta primeira fase foram implementadas as principais entidades do sistema, regras de negócio e funcionalidades básicas de cadastro, entrada, saída e geração de relatórios.
-
-## Funcionalidades Implementadas
-
-### Cadastro de Clientes
-
-* Cadastro de Estudantes;
-* Cadastro de Professores;
-* Cadastro de Empresas;
-* Associação de placas aos clientes cadastrados.
-
-### Controle de Estacionamento
-
-* Registro de entrada de veículos;
-* Registro de saída de veículos;
-* Controle de veículos estacionados.
-
-### Regras de Negócio
-
-#### Cliente Avulso
-
-* Cobrança por hora até 6 horas;
-* Cobrança por diária para períodos superiores;
-* Bloqueio de placa em caso de inadimplência.
-
-#### Estudante
-
-* Cadastro de um veículo por CPF;
-* Controle de saldo pré-pago.
-
-#### Professor
-
-* Cadastro de até dois veículos;
-* Estacionamento gratuito;
-* Apenas um veículo estacionado simultaneamente.
-
-#### Empresa
-
-* Cadastro de múltiplos veículos;
-* Controle de débitos acumulados.
-
-### Relatórios
-
-* Situação de cliente;
-* Clientes impedidos;
-* Total arrecadado por período;
-* Top 10 clientes mais frequentes do ano.
-
-## Tecnologias Utilizadas
-
-* JavaScript
-* Node.js
-
-## Conceitos Aplicados
-
-* Programação Orientada a Objetos (POO)
-* Encapsulamento
-* Herança
-* Polimorfismo
-* Abstração
-* Map
-* Set
-
-## Estrutura do Projeto
-
-```text
-src
-├── model
-├── service
-└── App.js
-```
-
-### model
-
-Contém as classes responsáveis pela representação das entidades do sistema.
-
-### service
-
-Contém as regras de negócio e funcionalidades do estacionamento.
-
-### App.js
-
-Classe principal responsável pela execução e demonstração do funcionamento do sistema.
-
-## Como Executar
-
-Execute o projeto utilizando:
-
-```bash
-node src/App.js
-```
+# Sistema de Controle de Estacionamento de Veículos de Passeio
 
 ## Autor
 
 Neimar da Silva Valentim
 
-Projeto acadêmico desenvolvido para a disciplina de Programação Orientada a Objetos da PUCRS.
+## Sobre o projeto
+
+Este projeto foi desenvolvido para a disciplina de Programação Orientada a Objetos utilizando JavaScript.
+
+A ideia do sistema é controlar a entrada e a saída de veículos em um estacionamento com diferentes tipos de clientes:
+
+* Clientes Avulsos;
+* Estudantes;
+* Professores;
+* Empresas.
+
+Cada tipo de cliente possui regras próprias de utilização e cobrança.
+
+---
+
+## Explicando de forma simples
+
+Imagine um estacionamento muito grande.
+
+Quando um veículo chega, o sistema verifica:
+
+* Quem é o cliente;
+* Se ele pode entrar;
+* Se possui alguma restrição.
+
+Quando o veículo sai, o sistema:
+
+* Calcula o valor a ser cobrado;
+* Verifica descontos;
+* Registra as informações da saída;
+* Atualiza os dados do cliente.
+
+Tudo isso é feito automaticamente pelas classes do sistema.
+
+---
+
+## Conceitos de Programação Orientada a Objetos utilizados
+
+Durante o desenvolvimento foram aplicados os principais conceitos de orientação a objetos:
+
+### Classes
+
+As classes representam os elementos do sistema, como:
+
+* Cliente;
+* Estudante;
+* Professor;
+* Empresa;
+* TicketEstacionamento.
+
+### Herança
+
+As classes Estudante, Professor e Empresa herdam características da classe Cliente.
+
+### Encapsulamento
+
+Os dados dos objetos são protegidos e manipulados através de métodos específicos.
+
+### Polimorfismo
+
+Cada tipo de cliente possui sua própria forma de calcular custos e validar entradas.
+
+---
+
+## Estrutura do projeto
+
+```text
+src/
+├── model/
+├── service/
+└── App.js
+```
+
+### Pasta model
+
+Contém as classes que representam os objetos do sistema.
+
+Exemplos:
+
+* Cliente;
+* Estudante;
+* Professor;
+* Empresa;
+* TicketEstacionamento.
+
+### Pasta service
+
+Contém as regras de funcionamento do sistema.
+
+Exemplos:
+
+* CadastroClientes;
+* RegistroDeEntradas_E_Saidas;
+* RelatoriosGerenciais.
+
+### App.js
+
+Classe principal responsável por executar o sistema.
+
+---
+
+## Funcionalidades implementadas
+
+* Cadastro de clientes;
+* Cadastro de placas;
+* Controle de entrada;
+* Controle de saída;
+* Cálculo de cobranças;
+* Controle de inadimplência;
+* Bloqueio de clientes quando necessário;
+* Aplicação de descontos;
+* Relatórios gerenciais.
+
+---
+
+## Estruturas de dados utilizadas
+
+O projeto utiliza:
+
+### Set
+
+Utilizado para:
+
+* Evitar placas duplicadas;
+* Controlar listas de bloqueio.
+
+### Map
+
+Utilizado para:
+
+* Localizar clientes rapidamente;
+* Associar placas aos seus proprietários;
+* Controlar veículos estacionados.
+
+---
+
+## Como executar
+
+1. Instalar o Node.js.
+2. Abrir o projeto no Visual Studio Code.
+3. Abrir o terminal.
+4. Executar o comando:
+
+```bash
+node src/App.js
+```
+
+---
+
